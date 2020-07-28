@@ -1,53 +1,65 @@
 .PopModal {
-    font-size: 12px;
-  }
-  .PopModal > .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-  }
-  .PopModal > .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-  .PopModal > .actions {
-    width: 100%;
-    padding: 10px 5px;
-    margin: auto;
-    text-align: center;
-  }
-  .PopModal > .close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid #cfcece;
-  }
+  font-size: 12px;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+.PopModal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.PopModal > .content{
+  width: 100%;
+  padding: 10px 5px;
+  max-width: 100% !important;
+  max-height: 480px !important;
+}
+.PopModal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.PopModal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
 
-  .PopButton{
-    font-family: Roboto,Arial,sans-serif;
-    color: #000;
-    cursor: pointer;
-    padding: 0 30px;
-    display: inline-block;
-    margin: 10px 15px;
-    text-transform: uppercase;
-    line-height: 2em;
-    letter-spacing: 1.5px;
-    font-size: 1em;
-    outline: none;
-    position: relative;
-    font-size: 14px;
-    border: 3px solid #cfcece;
-    background-color: #fff;
-    border-radius: 15px 15px 15px 15px;
-    transition: all .3s;
-  }
+.PopModal canvas{
+  max-width: 100% !important;
+  max-height: 400px !important;
+}
+
+.PopButton{
+  font-family: Roboto,Arial,sans-serif;
+  color: #000;
+  cursor: pointer;
+  padding: 0 12px;
+  display: inline-block;
+  margin: 0px 15px;
+  line-height: 1.8em;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  font-size: 12px;
+  border: 3px solid #cfcece;
+  background-color: #fff;
+  border-radius: 15px 15px 15px 15px;
+  transition: all .3s;
+}
+.popup-content {
+  width: 90% !important;
+  max-height: 510px !important;
+}

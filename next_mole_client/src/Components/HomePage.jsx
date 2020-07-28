@@ -6,9 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import User from '../images/User.png'
 import Form from 'react-bootstrap/Form';
-import styled from 'styled-components';
-import net1 from '../images/net1.png';
-import bg from '../images/bgHomePage.png';
+//import styled from 'styled-components';
+//import net1 from '../images/net1.png';
+//import bg from '../images/bgHomePage.png';
 import { withRouter } from 'react-router-dom';
 import logo2 from '../images/logo2.png';
 import Nav from '../Components/Nav';
@@ -17,8 +17,6 @@ import UploadImage from './UploadImage.jsx';
 import Category from './Category';
 import PopNet from './PopNet';
 import '../css/homecss.css';
-import Popup from "reactjs-popup";
-import '../css/Popup.css';
 
 
 import Swal from 'sweetalert2';
@@ -26,8 +24,7 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal)
 
-var net = false;
-
+var currentCat = null;
 
 class HomePage extends Component {
   constructor(props) {
@@ -168,6 +165,7 @@ class HomePage extends Component {
 
   getNetForCat = (category) => {
     console.log("inside get network");
+    currentCat = category;
     let api = this.apiUrl + 'getNetwork/?categoryNAME=' + category;
     console.log(api);
     fetch(api, {
@@ -184,6 +182,9 @@ class HomePage extends Component {
       .then(result => {
         console.log(result);
         if (result != null) {
+          result.Nodes.map((item)=>item.id=item.NodeNum);
+          result.Links.map((item)=>{item.target=item.TargetNode; item.source=item.SourceNode});
+          console.log(result)
           this.setState(prevState => ({
             networkToShow: {
               ...prevState.networkToShow,
@@ -230,12 +231,13 @@ closeModal() {
               <Col xs={6} >
 
                 <Row style={{ marginTop: 30 }} >
-                  <Col style={{}} className="temp" md={6} xs={12}>
-                    {/* <img alt='' style={{ maxHeight: 140, maxWidth: 140 }} src={logo2} /> */}
+                 {/*   <Col style={{}} className="temp" md={6} xs={12}>
+                   <img alt='' style={{ maxHeight: 140, maxWidth: 140 }} src={logo2} /> 
                   </Col>
                   <Col style={{ paddingRight: 10, marginTop: 10 }} className="temp" xs={12} md={6}> <img alt='' style={{ zIndex: '100', Height: 120, maxWidth: 100 }} src={User} />
                     <p>User Name</p>
                   </Col>
+                  */}
                 </Row>
               </Col>
             </Row>
@@ -243,8 +245,8 @@ closeModal() {
         </Container>
         <Container>
           <Row>
-         <PopNet isOpen={this.state.open} closeModal={this.closeModal} data={this.state.networkToShow}/>
-          </Row>
+          <PopNet isOpen={this.state.open} closeModal={this.closeModal} category={currentCat} data={this.state.networkToShow}/>
+                    </Row>
 
         </Container>
         <Container style={{ marginTop: 30 }}>

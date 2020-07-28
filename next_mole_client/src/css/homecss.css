@@ -19,7 +19,8 @@
     box-sizing: border-box;
   }
   .jumbo {
-    background: url(${bg}) no-repeat fixed bottom;
+    /*background: url(${bg}) no-repeat fixed bottom;*/
+    background: url(../images/bgHomePage.png) no-repeat fixed bottom;
     background-size: cover;
     height: 360px;
     position: relative;

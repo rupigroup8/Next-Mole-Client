@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/igroup8/prod/client/static/css/main.3514c630.chunk.css",
+    "main.js": "/igroup8/prod/client/static/js/main.c5a53e0a.chunk.js",
+    "main.js.map": "/igroup8/prod/client/static/js/main.c5a53e0a.chunk.js.map",
+    "runtime-main.js": "/igroup8/prod/client/static/js/runtime-main.f24e6154.js",
+    "runtime-main.js.map": "/igroup8/prod/client/static/js/runtime-main.f24e6154.js.map",
+    "static/css/2.4c3ea4cc.chunk.css": "/igroup8/prod/client/static/css/2.4c3ea4cc.chunk.css",
+    "static/js/2.56855cb5.chunk.js": "/igroup8/prod/client/static/js/2.56855cb5.chunk.js",
+    "static/js/2.56855cb5.chunk.js.map": "/igroup8/prod/client/static/js/2.56855cb5.chunk.js.map",
+    "index.html": "/igroup8/prod/client/index.html",
+    "precache-manifest.7dd11ae53ab6aedf96b2a2c0ac8db912.js": "/igroup8/prod/client/precache-manifest.7dd11ae53ab6aedf96b2a2c0ac8db912.js",
+    "service-worker.js": "/igroup8/prod/client/service-worker.js",
+    "static/css/2.4c3ea4cc.chunk.css.map": "/igroup8/prod/client/static/css/2.4c3ea4cc.chunk.css.map",
+    "static/css/main.3514c630.chunk.css.map": "/igroup8/prod/client/static/css/main.3514c630.chunk.css.map",
+    "static/js/2.56855cb5.chunk.js.LICENSE.txt": "/igroup8/prod/client/static/js/2.56855cb5.chunk.js.LICENSE.txt",
+    "static/media/homecss.css": "/igroup8/prod/client/static/media/bgHomePage.e31ea473.png",
+    "static/media/logo2.png": "/igroup8/prod/client/static/media/logo2.8264c5a0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f24e6154.js",
+    "static/css/2.4c3ea4cc.chunk.css",
+    "static/js/2.56855cb5.chunk.js",
+    "static/css/main.3514c630.chunk.css",
+    "static/js/main.c5a53e0a.chunk.js"
+  ]
+}

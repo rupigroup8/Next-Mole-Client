@@ -25,7 +25,7 @@ class SignUp extends Component {
           userPassword: '',
           userName:'',
           userGender:null,
-          validation:'True'
+          validation:true
 
         }
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -51,13 +51,13 @@ class SignUp extends Component {
       }
             
     signUser = (event) => {   
-      
+      event.preventDefault();
       var counter=0;
       if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$/i.test(this.state.userEmail)) {    
           counter++;
       }
       else{
-        this.setState({validation: 'False'})
+        this.setState({validation: false})
       }     
       var pass=this.state.userPassword;
       var reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/;
@@ -66,12 +66,12 @@ class SignUp extends Component {
          counter++;
 
         } else{
-            this.setState({validation: 'False'})
+            this.setState({validation: false})
             MySwal.fire("Your password must contain at least one uppercase and must be between 8 and 30 characters, please try again", "", "warning")
         }
         
       if(this.state.userGender===null){
-        this.setState({validation: 'False'})
+        this.setState({validation: false})
         MySwal.fire("select a Gender, please try again", "", "warning")
       }
       else{
@@ -79,7 +79,7 @@ class SignUp extends Component {
       }
       console.log(counter);
    if(counter===3){
-        event.preventDefault();
+       // event.preventDefault();
         const userToPost={
             UserEmail: this.state.userEmail,
             UserPassword: this.state.userPassword,
